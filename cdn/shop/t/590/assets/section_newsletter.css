@@ -1,0 +1,122 @@
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative
+}
+
+@media screen and (min-width: 750px) {
+    .newsletter-form {
+        margin: 0 auto;
+        max-width: 50rem
+    }
+}
+
+.newsletter .newsletter-form .newsletter-form__field-wrapper {
+    width: 100%;
+    max-width: 50rem;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box
+}
+
+.newsletter-form__field-wrapper .field__input {
+    padding: 1rem 5rem 1rem 1rem;
+    margin-left: -1px
+}
+
+.newsletter-form__field-wrapper .field {
+    z-index: 0
+}
+
+.newsletter-form__field-wrapper .field,
+.newsletter-form__field-wrapper .field__input {
+    border: none;
+    box-shadow: none
+}
+
+.newsletter-form__field-wrapper .field:before,
+.newsletter-form__field-wrapper .field:after {
+    content: none
+}
+
+.newsletter-form__field-wrapper .field__label {
+    opacity: .3
+}
+
+.newsletter-form__message {
+    justify-content: center;
+    margin-bottom: 0
+}
+
+.newsletter-form__message--success {
+    margin-top: 2rem
+}
+
+@media screen and (min-width: 750px) {
+    .newsletter-form__message {
+        justify-content: flex-start
+    }
+}
+
+.newsletter-form__button {
+    width: 25%;
+    margin: 0 -1px;
+    right: var(--inputs-border-width);
+    top: 0;
+    height: 100%;
+    z-index: 2;
+    font-size: 1.2rem
+}
+
+.newsletter-form__button:focus-visible {
+    box-shadow: none;
+    background-color: rgb(var(--palette-four-background))
+}
+
+.newsletter-form__button:focus {
+    box-shadow: none;
+    background-color: rgb(var(--palette-four-background))
+}
+
+.newsletter__wrapper>* {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.newsletter__wrapper>*+* {
+    margin-top: 2rem
+}
+
+.newsletter__wrapper>*+.newsletter-form {
+    margin-top: 3rem
+}
+
+.newsletter__wrapper .newsletter__icon {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.newsletter__wrapper .grid {
+    align-items: center
+}
+
+@media screen and (max-width: 749px) {
+    .newsletter-form__message,
+    .newsletter__wrapper .grid {
+        text-align: center
+    }
+}
+
+.newsletter .kl-private-reset-css-Xuajs1 input {
+    border-radius: 3px 0 0 3px !important;
+    border: none !important
+}
+
+.newsletter .kl-private-reset-css-Xuajs1[data-testid=form-component] {
+    border-radius: 0 3px 3px 0 !important
+}
+
+/*# sourceMappingURL=/cdn/shop/t/590/assets/section_newsletter.css.map?v=144037258382910628891765472530 */

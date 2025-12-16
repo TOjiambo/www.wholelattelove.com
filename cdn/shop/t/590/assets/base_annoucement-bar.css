@@ -1,0 +1,92 @@
+.announcement-bar {
+    display: block;
+    font-size: .875rem;
+    min-height: 2.625rem;
+    line-height: 1.5rem;
+    position: relative;
+    overflow: hidden
+}
+
+.announcement-bar--center .announcement-bar__message {
+    text-align: center
+}
+
+.announcement-bar--right .announcement-bar__message {
+    text-align: right
+}
+
+.announcement-bar__message {
+    font-weight: 300;
+    opacity: 0;
+    animation: AnnouncementIn .3s ease-in;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.announcement-bar.loaded .announcement-bar__message {
+    opacity: 1
+}
+
+.announcement-bar__message.toggle {
+    animation: AnnouncementOut .3s ease-out
+}
+
+.announcement-bar.loaded .announcement-bar__message[aria-current=false] {
+    display: none
+}
+
+.announcement-bar__message>.link {
+    text-decoration: none
+}
+
+.announcement-bar__close {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: inherit !important
+}
+
+@media screen and (max-width: 989px) {
+    .announcement-bar__message {
+        padding: 0 2.5rem
+    }
+    .announcement-bar__close {
+        right: 5px;
+        transform: translateY(-50%)
+    }
+}
+
+.announcement-bar__close svg {
+    vertical-align: middle;
+    width: 1.7rem;
+    height: 1.7rem
+}
+
+@keyframes AnnouncementIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -150%)
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%)
+    }
+}
+
+@keyframes AnnouncementOut {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%)
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 100%)
+    }
+}
+
+/*# sourceMappingURL=/cdn/shop/t/590/assets/base_annoucement-bar.css.map?v=10705278570632925111765472456 */

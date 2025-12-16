@@ -1,0 +1,39 @@
+.featured-collection .slider--desktop .grid__item .card__media {
+    padding: 1rem
+}
+
+.featured-collection .slider--desktop .grid__item .card__media img {
+    object-fit: contain;
+    background-color: #fff
+}
+
+@media screen and (min-width: 990px) {
+    .featured-collection .slider--desktop {
+        scroll-padding-left: .5rem;
+        padding: 0 .5rem;
+        margin: 0 -.5rem
+    }
+    .featured-collection .slider--desktop:after {
+        content: "";
+        width: 0;
+        padding-left: 0 !important;
+        margin-left: 0 !important
+    }
+}
+
+@media screen and (min-width: 1367px) {
+    .featured-collection slider-component .slider-button.slider-button--next {
+        margin-right: -55px
+    }
+    .featured-collection slider-component .slider-button.slider-button--prev {
+        margin-left: -55px
+    }
+}
+
+@media screen and (min-width: 990px) {
+    .featured-collection .card__rating .yotpo-prod-link .yotpo-bottom-line-scroll-panel .yotpo-sr-bottom-line-summary {
+        flex-direction: row !important
+    }
+}
+
+/*# sourceMappingURL=/cdn/shop/t/590/assets/section_featured-collection.css.map?v=85618411072968203171765472523 */

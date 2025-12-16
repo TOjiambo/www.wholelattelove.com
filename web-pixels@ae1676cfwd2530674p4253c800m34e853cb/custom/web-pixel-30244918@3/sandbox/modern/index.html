@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Web Pixels Manager Sandbox</title>
+    <script src="https://www.wholelattelove.com/cdn/wpm/sae1676cfwd2530674p4253c800m34e853cbm.js"></script>
+
+    <script type="text/javascript">
+        (function(shopify) {
+            shopify.extend('WebPixel::Render', function(api) {
+                var analytics = api.analytics,
+                    browser = api.browser,
+                    init = api.init;
+                ! function(w, d) {
+                    if (!w.rdt) {
+                        var p = w.rdt = function() {
+                            p.sendEvent ? p.sendEvent.apply(p, arguments) : p.callQueue.push(arguments)
+                        };
+                        p.callQueue = [];
+                        var t = d.createElement("script");
+                        t.src = "https://www.redditstatic.com/ads/pixel.js", t.async = !0;
+                        var s = d.getElementsByTagName("script")[0];
+                        s.parentNode.insertBefore(t, s)
+                    }
+                }(window, document);
+
+                rdt('init', 't2_3leqa', {
+                    "optOut": false,
+                    "useDecimalCurrencyValues": true
+                });
+
+                // This may want to be removed as the GTM Pixel is processing this event
+                analytics.subscribe("page_viewed", (event) => {
+                    rdt('track', 'PageVisit');
+                });
+
+                analytics.subscribe("product_viewed", (event) => {
+                    rdt('track', 'ViewContent');
+                });
+
+                analytics.subscribe("product_added_to_cart", (event) => {
+                    const cartLine = event.data.cartLine;
+                    rdt('track', 'AddToCart', {
+                        currency: cartLine.merchandise.price.currencyCode,
+                        value: cartLine.cost.totalAmount.amount,
+                        itemCount: cartLine.quantity
+                    });
+                });
+
+                analytics.subscribe("checkout_completed", (event) => {
+                    const checkout = event.data.checkout;
+                    rdt('track', 'Purchase', {
+                        currency: checkout.currencyCode,
+                        value: checkout.totalPrice.amount,
+                        itemCount: checkout.lineItems.reduce((total, item) => total + item.quantity, 0),
+                        conversionId: event.clientId,
+                        products: checkout.lineItems.map(item => ({
+                            id: item.variant.sku,
+                            category: item.title,
+                            name: item.variant.title
+                        }))
+                    });
+                });
+            });
+        })(self.webPixelsManager.createShopifyExtend('30244918', 'custom'));
+    </script>
+
+</head>
+
+<body></body>
+
+</html>

@@ -1,0 +1,419 @@
+.product-3d-viewer .product-3d-viewer-wrapper {
+    position: relative;
+    display: block;
+    box-shadow: 0 0 18px #0000001a;
+    padding: 0
+}
+
+.product-3d-viewer-wrapper .feature-wrapper {
+    color: inherit;
+    height: 100%;
+    position: relative;
+    text-decoration: none
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature {
+    display: flex;
+    flex-direction: row;
+    height: 100%
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature .feature__inner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: hidden
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature .feature__inner:before {
+    content: "";
+    width: 0;
+    height: 0;
+    padding-bottom: 80%
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature .feature__inner .feature__image-wrapper {
+    overflow: hidden;
+    z-index: 0
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature .feature__inner .feature__image-wrapper .feature__image {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature .feature__inner .information {
+    display: none
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature .feature__inner .content {
+    display: grid;
+    padding: 0;
+    z-index: 0
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature .content {
+    display: grid;
+    padding: 1rem;
+    width: 100%;
+    flex-grow: 1;
+    z-index: 1
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content {
+    background-color: #fff;
+    padding: 4rem 3rem 7rem;
+    position: relative
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content.reduce-padding {
+    padding: 4rem 3rem
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information {
+    position: relative;
+    display: flex;
+    flex-direction: column
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .pre-model.hide {
+    display: none
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .post-model {
+    display: none
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .post-model.visible {
+    display: flex;
+    flex-direction: column
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .feature__heading {
+    font-size: 2rem;
+    margin-bottom: .6rem;
+    margin-top: 0
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .feature__heading a {
+    color: #1b1b1b
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .feature__info {
+    padding-top: .4rem;
+    color: #5e5f65
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .feature__text {
+    width: 100%;
+    margin: 1.2rem 0;
+    line-height: 200%
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .feature__model-3d-info {
+    margin-bottom: 0;
+    margin-top: auto
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .feature__model-3d-info p {
+    color: #5e5f65 !important;
+    font-size: 1.1rem;
+    font-weight: 500
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .feature__model-3d-info ul {
+    list-style: none;
+    padding: 1rem 0
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .feature__model-3d-info ul li:first-child {
+    padding-bottom: 1rem
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .feature__model-3d-info ul li .link {
+    color: #1b1b1b;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    transition: all .1s ease-in-out;
+    font-size: .875rem
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .feature__model-3d-info ul li .link .icon {
+    width: .8rem;
+    margin-right: 1rem;
+    color: #1b1b1b
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .feature__model-3d-info ul li .link:hover,
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .feature__model-3d-info ul li .link:hover .icon {
+    color: #3d7a94
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information a,
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information a:hover,
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .link--text:hover {
+    text-decoration: none
+}
+
+.product-3d-viewer-wrapper .feature__model-viewer {
+    width: 100%;
+    height: 100%
+}
+
+.product-3d-viewer-wrapper .feature__model-viewer model-viewer {
+    width: 100%;
+    height: 100%;
+    position: absolute
+}
+
+.product-3d-viewer__title {
+    margin: 0
+}
+
+.product-3d-viewer-wrapper {
+    margin-bottom: 1rem
+}
+
+.product-3d-viewer-wrapper .feature-wrapper {
+    width: 100%
+}
+
+.product-features__button {
+    margin-top: 3rem
+}
+
+.product-3d-viewer-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    background-color: #fff;
+    left: 0;
+    right: auto;
+    bottom: 0rem;
+    width: calc(50% + .5rem);
+    z-index: 1
+}
+
+.launch-3d-viewer-button {
+    color: rgba(var(--palette-four-text));
+    background-color: #f2f2f2;
+    border: none;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 3rem;
+    font-size: 1rem
+}
+
+.launch-3d-viewer-button.hide {
+    z-index: 0;
+    display: none
+}
+
+.launch-3d-viewer-button:hover {
+    background-color: #377580;
+    color: #fff
+}
+
+.launch-3d-viewer-button:hover .icon-ar {
+    fill: #fff
+}
+
+.launch-3d-viewer-button .icon-ar {
+    width: 1.8rem;
+    margin-right: 1rem
+}
+
+.launch-3d-viewer-button p {
+    padding-right: 1rem;
+    margin-bottom: 0;
+    font-weight: 700
+}
+
+.launch-3d-viewer-button .icon-arrow {
+    height: 1rem;
+    transform: rotate(0)
+}
+
+.product-3d-viewer-wrapper .feature__model-3d-use {
+    padding: 1rem 0;
+    display: flex;
+    column-gap: 2rem
+}
+
+.product-3d-viewer-wrapper .feature__model-3d-use h6 {
+    font-size: 1.125rem;
+    margin-bottom: .5rem
+}
+
+.product-3d-viewer-wrapper .feature__model-3d-use .rotate,
+.product-3d-viewer-wrapper .feature__model-3d-use .zoom {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem
+}
+
+.product-3d-viewer-wrapper .feature__model-3d-use .rotate .icon-mouse-rotate {
+    height: 4rem;
+    color: #5e5f65
+}
+
+.product-3d-viewer-wrapper .feature__model-3d-use .zoom .icon-mouse-zoom {
+    height: 3rem;
+    color: #5e5f65
+}
+
+.product-3d-viewer-wrapper .model__environments {
+    padding-top: 1rem
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .model__environments .feature__heading {
+    margin-bottom: 1rem
+}
+
+.product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .post-model.visible .model__environments .feature__heading {
+    font-size: 1.313rem
+}
+
+.product-3d-viewer-wrapper .model__environments .envmap-list .envmap {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 1%;
+    text-align: center
+}
+
+.product-3d-viewer-wrapper .model__environments .envmap-list .envmap .grey-limbo {
+    background-color: #b5b5b5;
+    display: inline-block
+}
+
+.product-3d-viewer-wrapper .model__environments .envmap-list .envmap img,
+.product-3d-viewer-wrapper .model__environments .envmap-list .envmap .grey-limbo {
+    border: 3px solid transparent;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px
+}
+
+.product-3d-viewer-wrapper .model__environments .envmap-list .envmap:hover img,
+.product-3d-viewer-wrapper .model__environments .envmap-list .envmap:hover .grey-limbo {
+    border-color: #9798a2
+}
+
+.product-3d-viewer-wrapper .model__environments .envmap-list .envmap.active img,
+.product-3d-viewer-wrapper .model__environments .envmap-list .envmap.active .grey-limbo {
+    border-color: #000
+}
+
+.product-3d-viewer .disclaimer {
+    color: #5e5f65;
+    font-size: .8rem;
+    padding: 2rem 3rem
+}
+
+@media screen and (min-width: 990px) {
+    .product-3d-viewer-wrapper {
+        margin-bottom: 0
+    }
+    .product-3d-viewer-wrapper .feature-wrapper .feature>.content .information {
+        margin-bottom: auto
+    }
+}
+
+@media screen and (max-width: 989px) {
+    .product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .post-model.visible .model__environments {
+        order: 1;
+        padding-top: 0;
+        padding-bottom: 2rem
+    }
+    .product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .post-model.visible .feature__heading {
+        order: 2
+    }
+    .product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .post-model.visible .feature__text {
+        order: 3
+    }
+    .product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .post-model.visible .feature__model-3d-info {
+        order: 4
+    }
+    .product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .post-model.visible .feature__model-3d-use {
+        order: 5
+    }
+    .product-features__feature {
+        width: calc(100% - 3rem)
+    }
+    .product-3d-viewer-wrapper .feature-wrapper .feature {
+        flex-direction: column
+    }
+    .product-3d-viewer-wrapper .feature-wrapper .feature .feature__inner {
+        order: 1
+    }
+    .product-3d-viewer-wrapper .feature-wrapper .feature>.content {
+        order: 2
+    }
+    .product-3d-viewer-wrapper .feature-wrapper .feature>.content.reduce-padding {
+        order: 1
+    }
+    .product-3d-viewer .product-3d-viewer-wrapper .product-3d-viewer-button-wrapper {
+        width: 100%
+    }
+    .product-3d-viewer .disclaimer {
+        padding: 1rem;
+        text-align: center
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .product-3d-viewer-wrapper .mobile-feature__text,
+    .product-3d-viewer-wrapper .mobile-feature__model-3d-use {
+        display: none
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .product-3d-viewer-wrapper .post-model.visible .feature__text,
+    .product-3d-viewer-wrapper .feature__model-3d-use {
+        display: none
+    }
+    .product-3d-viewer-wrapper .mobile-feature__text {
+        order: 3
+    }
+    .product-3d-viewer-wrapper .mobile-feature__model-3d-use {
+        order: 4
+    }
+    .product-3d-viewer .product-3d-viewer-wrapper {
+        box-shadow: none
+    }
+    .product-3d-viewer-wrapper .feature-wrapper .feature>.content {
+        padding: 1rem 1rem 6rem
+    }
+    .product-3d-viewer-wrapper .feature-wrapper .feature>.content.reduce-padding {
+        padding: 1rem
+    }
+    .product-3d-viewer-wrapper .feature-wrapper .feature>.content .information .post-model.visible .feature__model-3d-info {
+        order: 5
+    }
+    .mobile-feature__model-3d-use .rotate,
+    .mobile-feature__model-3d-use .ar,
+    .mobile-feature__model-3d-use .zoom {
+        display: flex;
+        column-gap: 1rem;
+        margin-bottom: 1rem
+    }
+    .mobile-feature__model-3d-use .rotate svg,
+    .mobile-feature__model-3d-use .ar svg,
+    .mobile-feature__model-3d-use .zoom svg {
+        width: 3.5rem
+    }
+}
+
+/*# sourceMappingURL=/cdn/shop/t/590/assets/section_product-3d-viewer.css.map?v=75499396286681546901765472532 */
