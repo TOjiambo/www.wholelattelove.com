@@ -9,74 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
-    <script>
-        window.theme = {
-            template: "index",
-            customer: {
-                id: "",
-                email: null,
-                firstName: null,
-            },
-            strings: {
-                collectionEmpty: "No products found",
-                regularPrice: "Regular price",
-                salePrice: "Sale price",
-                clearAll: "Clear all",
-                noResults: "No result found",
-                noResultsMessage: "Try clearing filters or changing your input",
-                results: "[start] - [end] out of [total] results found.",
-                searchResults: "[start] - [end] out of [total] results found.",
-                ar: "3D\/AR",
-            },
 
-            articleDefaultImage: "\/\/www.wholelattelove.com\/cdn\/shop\/files\/image-coming-soon.jpg?v=1693327484\u0026width=200",
-
-
-            productDefaultImage: "\/\/www.wholelattelove.com\/cdn\/shop\/files\/image-coming-soon.jpg?v=1693327484\u0026width=200",
-
-            yotpo: {
-                bottomlineInstanceId: "597382",
-            }
-        }
-
-        window.shopUrl = 'https://www.wholelattelove.com';
-        window.routes = {
-            cart_add_url: '/cart/add',
-            cart_change_url: '/cart/change',
-            cart_update_url: '/cart/update',
-            cart_url: '/cart',
-        };
-
-        window.cartStrings = {
-            error: `There was an error while updating your cart. Please try again.`,
-            quantityError: `You can only add [quantity] of this item to your cart.`,
-        };
-
-        window.variantStrings = {
-            addToCart: `Add to cart`,
-            addToCartBundle: `Add to Cart &amp; Bundle`,
-            soldOut: `Sold out`,
-            unavailable: `Unavailable`,
-            preOrder: `Pre-Order`,
-            preOrderBundle: `Pre-Order &amp; Bundle`,
-        };
-
-        window.accessibilityStrings = {
-            imageAvailable: `Image [index] is now available in gallery view`,
-            shareSuccess: `Link copied to clipboard`,
-            pauseSlideshow: `Pause slideshow`,
-            playSlideshow: `Play slideshow`,
-            vendor: `Vendor:`,
-        };
-
-        window.breakpoints = {
-            mobile: '425',
-            tablet: '750',
-            desktop: '990',
-        };
-    </script>
-
-    <link rel="canonical" href="#/">
 
     <link rel="icon" type="image/png" href="bm-logo-vertical-roast.min.png">
     <title>
@@ -90,7 +23,6 @@
     <!-- ===================== ! -->
 
 
-    <meta name="author" content="Whole Latte Love">
     <meta property="og:site_name" content="Barista Mastery">
     <meta property="og:url" content="">
     <meta property="og:title" content="Barista Mastery - Espresso Machines, Coffee Makers &amp; Coffee">
@@ -112,35 +44,10 @@
 
     <meta name="robots" content="index,follow">
     <!-- Core -->
-    <link rel="preconnect" href="https://cdn.shopify.com">
-
-    <!-- LoyaltyLion & Yotpo -->
-    <link rel="preconnect" href="https://sdk-static.loyaltylion.net">
-    <link rel="preconnect" href="https://sdk.loyaltylion.net">
-    <link rel="preconnect" href="https://w2.yotpo.com">
-    <link rel="preconnect" href="https://static.klaviyo.com">
-    <!-- Remarketing -->
-    <link rel="preconnect" href="https://www.googleadservices.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://www.google-analytics.com">
-
-    <!-- Other -->
-    <link rel="preconnect" href="https://connect.facebook.net">
-    <link rel="preconnect" href="https://use.typekit.net" crossorigin>
-    <link rel="preconnect" href="https://p.typekit.net" crossorigin>
-
+    
     <!-- Theme Main Fonts -->
-    <link rel="preload" href="//www.wholelattelove.com/cdn/shop/t/640/assets/noe_display_medium-webfont.woff2?v=63135582317147526611770673783" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="//www.wholelattelove.com/cdn/shop/t/640/assets/noe_text_semibold.woff?v=2048965859876440601770673784" as="font" type="font/woff" crossorigin>
-
-
-    <link rel="preload" as="style" href="https://use.typekit.net/eut0kmc.css">
-
-    <link rel="stylesheet" href="https://use.typekit.net/eut0kmc.css" media="print" onload="this.media='all'">
-
-    <noscript>
-  <link rel="stylesheet" href="https://use.typekit.net/eut0kmc.css">
-</noscript>
+    <link rel="preload" href="cdn\shop\t\680\assets\noe_display_medium-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="cdn\shop\t\680\assets\noe_text_semibold.woff" as="font" type="font/woff" crossorigin>
     <!-- ===================== ! -->
     <!-- CSS          ! -->
     <!-- ===================== ! -->
@@ -467,224 +374,22 @@
         }
     </style>
 
-    <link rel="stylesheet" href="//www.wholelattelove.com/cdn/shop/t/640/assets/base_style.css?v=75646346890681293961770673751">
+    <link rel="stylesheet" href="cdn\shop\t\680\assets\base_style.css">
     <!-- ===================== ! -->
     <!-- JavaScript       ! -->
     <!-- ===================== ! -->
-    <script src="//www.wholelattelove.com/cdn/shop/t/640/assets/global.js?v=35770541053535364491770673770" defer="defer"></script>
-    <script src="//www.wholelattelove.com/cdn/shop/t/640/assets/js.cookie.min.js?v=62396916992581606271770673771" defer="defer"></script>
-    <script defer="defer">
-        function readCookie(name) {
-            var nameEQ = encodeURIComponent(name) + '=';
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) === 0) {
-                    return decodeURIComponent(c.substring(nameEQ.length, c.length));
-                }
-            }
-            return null;
-        }
+    <script src="cdn/shop/t/680/assets/global.js" defer="defer"></script>
+    <script src="cdn/shop/t/680/assets/js" defer="defer"></script>
+   
+    <link rel="stylesheet" href="cdn\shop\t\680\assets\base_card.css" media="print" onload="this.media='all'">
 
-        function getAlgoliaUserToken() {
-            try {
-                // Logged-in customer ID (non-PII stable ID)
-                if (window.theme && window.theme.customer && window.theme.customer.id) {
-                    return String(window.theme.customer.id);
-                }
+    <link rel="stylesheet" href="cdn\shop\t\680\assets\section_product-3d-viewer.css" media="print" onload="this.media='all'">
+    <noscript><link href="cdn\shop\t\680\assets\section_product-3d-viewer.css" rel="stylesheet" type="text/css" media="all" /></noscript>
+    <script src="cdn/shop/t/680/assets/section_product-3d-viewer.js" defer="defer"></script>
 
-                // Existing Algolia cookie, if present
-                var cookieToken = readCookie('_ALGOLIA');
-                if (cookieToken) {
-                    return String(cookieToken);
-                }
+    <script src="cdn/shop/t/680/assets/component_tabs.js" defer="defer"></script>
 
-                // Fallback to ShopifyAnalytics uniqToken if available
-                if (window.ShopifyAnalytics && window.ShopifyAnalytics.lib && typeof window.ShopifyAnalytics.lib.user === 'function') {
-                    var uniq = window.ShopifyAnalytics.lib.user().traits().uniqToken;
-                    if (uniq) return String(uniq);
-                }
-            } catch (e) {
-                console.warn('Error computing Algolia user token', e);
-            }
-
-            // Let Insights handle anonymous token if none found
-            return undefined;
-        }
-
-        (function() {
-            var ALGOLIA_INSIGHTS_SRC = 'https://cdn.jsdelivr.net/npm/search-insights@2.17.3';
-
-            // Load search-insights and create window.aa
-            (function(e, a, t, n, s, i, c) {
-                e.AlgoliaAnalyticsObject = s;
-                e[s] =
-                    e[s] ||
-                    function() {
-                        (e[s].queue = e[s].queue || []).push(arguments);
-                    };
-                e[s].version = (n.match(/@([^\/]+)\/?/) || [])[1];
-                i = a.createElement(t);
-                c = a.getElementsByTagName(t)[0];
-                i.async = 1;
-                i.src = n;
-                c.parentNode.insertBefore(i, c);
-            })(window, document, 'script', ALGOLIA_INSIGHTS_SRC, 'aa');
-
-            aa('init', {
-                appId: 'QB0BCNA4EQ',
-                apiKey: 'd00e8a983bebaef76b2c540c5382a175',
-                useCookie: true,
-            });
-
-            var userToken = getAlgoliaUserToken();
-            if (userToken) {
-                aa('setUserToken', userToken);
-                try {
-                    localStorage.setItem('algolia_user_token', userToken);
-                } catch (e) {
-                    console.warn('Unable to persist algolia_user_token to localStorage', e);
-                }
-            }
-        })();
-    </script>
-
-
-    <link rel="stylesheet" href="//www.wholelattelove.com/cdn/shop/t/640/assets/base_card.css?v=135871646874720676031770673737" media="print" onload="this.media='all'">
-
-    <link rel="stylesheet" href="//www.wholelattelove.com/cdn/shop/t/640/assets/section_product-3d-viewer.css?v=75499396286681546901770673804" media="print" onload="this.media='all'">
-    <noscript><link href="//www.wholelattelove.com/cdn/shop/t/640/assets/section_product-3d-viewer.css?v=75499396286681546901770673804" rel="stylesheet" type="text/css" media="all" /></noscript>
-    <script src="//www.wholelattelove.com/cdn/shop/t/640/assets/section_product-3d-viewer.js?v=75739619351741900441770673804" defer="defer"></script>
-
-    <script src="//www.wholelattelove.com/cdn/shop/t/640/assets/component_tabs.js?v=133057546549290191451770673766" defer="defer"></script>
-
-    <script>
-        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-
-        document.addEventListener('DOMContentLoaded', function() {
-            if (Shopify.designMode) {
-                document.documentElement.classList.add('shopify-design-mode');
-            }
-        });
-    </script>
-    <script>
-        function createScript(scriptUrl) {
-            const scriptEl = document.createElement('script')
-            scriptEl.src = scriptUrl;
-            scriptEl.async = false;
-            scriptEl.defer = 'defer';
-            let e = document.getElementsByTagName('script')[0];
-            e.parentNode.appendChild(scriptEl);
-        };
-    </script>
-    <script>
-        window.addEventListener('load', function() {
-            var _learnq = window._learnq || [];
-
-            function addedToCart() {
-                fetch(`${window.location.origin}/cart.js`)
-                    .then(res => res.clone().json().then(data => {
-                        var cart = {
-                            total_price: data.total_price / 100,
-                            $value: data.total_price / 100,
-                            total_discount: data.total_discount,
-                            original_total_price: data.original_total_price / 100,
-                            items: data.items
-                        }
-                        if (item !== 'undefined') {
-                            cart = Object.assign(cart, item)
-                        }
-                        if (klAjax) {
-                            _learnq.push(['track', 'Added to Cart', cart]);
-                            klAjax = false;
-                        }
-                    }))
-            };
-            (function(ns, fetch) {
-                ns.fetch = function() {
-                    const response = fetch.apply(this, arguments);
-                    response.then(res => {
-                        if (`${window.location.origin}/cart/add.js`
-                            .includes(res.url) && res.url !== '') {
-                            addedToCart()
-                        }
-                    });
-                    return response
-                }
-            }(window, window.fetch));
-            var klAjax = true;
-            var atcButtons = document.querySelectorAll("form[action*='/cart/add'] button[type='submit']");
-            for (var i = 0; i < atcButtons.length; i++) {
-                atcButtons[i].addEventListener("click", function() {
-                    if (klAjax) {
-                        _learnq.push(['track', 'Added to Cart', item]);
-                        klAjax = false;
-                    }
-                })
-            }
-        });
-    </script>
-    <script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
-    <script>
-        var klaviyo = klaviyo || [];
-        klaviyo.init({
-            account: 'XQwFHR',
-            list: 'VmrTrk',
-            platform: 'shopify',
-        });
-        klaviyo.enable('backinstock', {
-            trigger: {
-                product_page_text: 'Notify Me When Available',
-                product_page_class: '',
-                product_page_text_align: 'center',
-                product_page_margin: '0px',
-                replace_anchor: false,
-            },
-            modal: {
-                headline: '{product_name}',
-                body_content: 'Register to receive a notification when this item comes back in stock.',
-                email_field_label: 'Email',
-                button_label: 'Notify me when available',
-                subscribe_checked: false,
-                subscription_success_label: "You're in! We'll let you know when it's back.",
-                footer_content: '',
-                drop_background_color: '#000',
-                background_color: '#fff',
-                text_color: '#1b1b1b',
-                button_text_color: '#fff',
-                button_background_color: '#aa5707',
-                close_button_color: '#1b1b1b',
-                error_background_color: '#fcd6d7',
-                error_text_color: '#C72E2F',
-                success_background_color: '#d3efcd',
-                success_text_color: '#1B9500',
-            },
-        });
-    </script>
-
-    <script>
-        window.__lc = window.__lc || {};
-        window.__lc.license = 18379371; // Updated LiveChat license number
-
-        // Load the LiveChat script for guests
-        (function() {
-            var lc = document.createElement('script');
-            lc.type = 'text/javascript';
-            lc.async = true;
-            lc.src = 'https://cdn.livechatinc.com/tracking.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(lc, s);
-        })();
-    </script>
-
-
-    <!-- ===================== ! -->
-    <!-- Shopify        ! -->
-    <!-- ===================== ! -->
-    <script>
-        window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');
-    </script>
+    
     <meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/7895023675/digital_wallets/dialog">
     <meta name="shopify-checkout-api-token" content="b8b8dcc403fc92621f08b65b0632399d">
     <meta id="in-context-paypal-metadata" data-shop-id="7895023675" data-venmo-supported="true" data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="USD">
@@ -1088,10 +793,7 @@
             box-shadow: none;
         }
     </style>
-    <script id="sections-script" data-sections="base_header" defer="defer" src="//www.wholelattelove.com/cdn/shop/t/640/compiled_assets/scripts.js?v=604710"></script>
-    <script>
-        window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');
-    </script>
+  
 
 
     <!-- BEGIN app block: shopify://apps/yotpo-product-reviews/blocks/settings/eb7dfd7d-db44-4334-bc49-c893b51b36cf -->
@@ -1754,12 +1456,12 @@
                 display: none;
             }
         </style>
-        <link href="//www.wholelattelove.com/cdn/shop/t/640/assets/base_annoucement-bar.css?v=10705278570632925111770673735" rel="stylesheet" type="text/css" media="all" />
-        <script src="//www.wholelattelove.com/cdn/shop/t/640/assets/base_announcement-bar.js?v=160784220704719699411770673735" defer="defer"></script>
+        <link href="cdn\shop\t\680\assets\base_annoucement-bar.css" rel="stylesheet" type="text/css" media="all" />
+        <script src="cdn\shop\t\680\assets\base_announcement-bar.js?v=160784220704719699411770673735" defer="defer"></script>
        
     </div>
     <div id="shopify-section-sections--20345712345142__customer_bar" class="shopify-section shopify-section-group-group_header">
-        <link href="//www.wholelattelove.com/cdn/shop/t/640/assets/base_customer-bar.css?v=62560626428860946941770673741" rel="stylesheet" type="text/css" media="all" />
+        <link href="cdn\shop\t\680\assets\base_customer-bar.css" rel="stylesheet" type="text/css" media="all" />
 
         <style>
             .customer-bar__link .link:hover,
@@ -1829,22 +1531,22 @@
 
     </div>
     <div id="shopify-section-sections--20345712345142__header" class="shopify-section shopify-section-group-group_header section-header">
-        <link href="//www.wholelattelove.com/cdn/shop/t/640/assets/base_header.css?v=133290839442405152231770673743" rel="stylesheet" type="text/css" media="all" />
-        <link href="//www.wholelattelove.com/cdn/shop/t/640/assets/component_mega-menu.css?v=163035580282804791861770673759" rel="stylesheet" type="text/css" media="all" />
-        <link href="//www.wholelattelove.com/cdn/shop/t/640/assets/base_price.css?v=76422126936814750381770673749" rel="stylesheet" type="text/css" media="all" />
+        <link href="cdn/shop/t/680/assets/base_header.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="cdn/shop/t/680/assets/component_mega-menu.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="cdn/shop/t/680/assets/base_price.css" rel="stylesheet" type="text/css" media="all" />
 
-        <link rel="stylesheet" href="//www.wholelattelove.com/cdn/shop/t/640/assets/component_list-menu.css?v=20504387209626656161770673758" media="print" onload="this.media='all'">
-        <link rel="stylesheet" href="//www.wholelattelove.com/cdn/shop/t/640/assets/component_search.css?v=76364225931869335681770673764" media="print" onload="this.media='all'">
-        <link rel="stylesheet" href="//www.wholelattelove.com/cdn/shop/t/640/assets/component_menu-drawer.css?v=87444464748840485081770673760" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="cdn/shop/t/680/assets/component_list-menu.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="cdn/shop/t/680/assets/component_search.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="cdn/shop/t/680/assets/component_menu-drawer.css" media="print" onload="this.media='all'">
 
-        <noscript><link href="//www.wholelattelove.com/cdn/shop/t/640/assets/component_list-menu.css?v=20504387209626656161770673758" rel="stylesheet" type="text/css" media="all" /></noscript>
-        <noscript><link href="//www.wholelattelove.com/cdn/shop/t/640/assets/component_search.css?v=76364225931869335681770673764" rel="stylesheet" type="text/css" media="all" /></noscript>
-        <noscript><link href="//www.wholelattelove.com/cdn/shop/t/640/assets/component_menu-drawer.css?v=87444464748840485081770673760" rel="stylesheet" type="text/css" media="all" /></noscript>
+        <noscript><link href="cdn/shop/t/680/assets/component_list-menu.css?v=20504387209626656161770673758" rel="stylesheet" type="text/css" media="all" /></noscript>
+        <noscript><link href="cdn/shop/t/680/assets/component_search.css?v=76364225931869335681770673764" rel="stylesheet" type="text/css" media="all" /></noscript>
+        <noscript><link href="cdn/shop/t/680/assets/component_menu-drawer.css?v=87444464748840485081770673760" rel="stylesheet" type="text/css" media="all" /></noscript>
 
-        <script src="//www.wholelattelove.com/cdn/shop/t/640/assets/component_mega-menu.js?v=49135974707248639251770673760" defer="defer"></script>
-        <script src="//www.wholelattelove.com/cdn/shop/t/640/assets/component_search-bar.js?v=80442856737401689101770673764" defer="defer"></script>
+        <script src="cdn/shop/t/680/assets/component_mega-menu.js?v=49135974707248639251770673760" defer="defer"></script>
+        <script src="cdn/shop/t/680/assets/component_search-bar.js?v=80442856737401689101770673764" defer="defer"></script>
 
-        <script src="//www.wholelattelove.com/cdn/shop/t/640/assets/component_details-modal.js?v=45923215424046548271770673758" defer="defer"></script>
+        <script src="cdn/shop/t/680/assets/component_details-modal.js" defer="defer"></script>
 
         <style>
             :root {
